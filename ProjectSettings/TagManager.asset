@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fruit
+  - Enemy
+  - KillEnemy
+  - Ground
+  - Trap
+  - Box
+  - Audio
+  - KillBox
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Ground
+  - Wall
+  - Enemy
+  - BoxBreak
+  - Box
+  - FallingPlatform
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Trap
+    uniqueID: 346422163
+    locked: 0
+  - name: BackGround
+    uniqueID: 1993166101
+    locked: 0
+  - name: Player And Enemy
+    uniqueID: 1298083155
+    locked: 0

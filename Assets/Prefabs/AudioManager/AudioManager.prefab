@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5782587476246908904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1947464439369910535}
+  - component: {fileID: 4543346115708872488}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Audio
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1947464439369910535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782587476246908904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.609034, y: 5.4044724, z: -0.46654958}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4543346115708872488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782587476246908904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d61cf7ff12d84897ab79e429b860a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxSounds:
+  - audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+    name: CollectItem
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+    name: Jump
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 60495bce6836ce34ebed5d9c19f5a0b0, type: 3}
+    name: TakeDame
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+    name: TrampoLine2
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: acc222471bc7fef4e8e4ad818ad1ff6a, type: 3}
+    name: HitEnemy
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: ead44020c8849314faf3a9848e42ca4f, type: 3}
+    name: BlockBreak
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: e33a8590e0a184a40affe99e0a69bd6e, type: 3}
+    name: ClickButton
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  bgSounds:
+  - audioClip: {fileID: 8300000, guid: 6a374a988889aa44a84b222db70d9c2f, type: 3}
+    name: MenuBackground
+    volumn: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: c75d9d1fb01869145ac2fc61721187b7, type: 3}
+    name: Level1Background
+    volumn: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 6548843869ff00b458afb214ef8aedbf, type: 3}
+    name: Level2Background
+    volumn: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 060d4e55f542f334d8a9ce208ca8c97d, type: 3}
+    name: Level3Background
+    volumn: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 091a369c3c2b63245bfddcb8aefae8be, type: 3}
+    name: Level0Background
+    volumn: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  curScene: 
+  curBackgroundSound: 
