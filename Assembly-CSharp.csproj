@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\Traps\FallingPlatform\FallingPlatform.cs" />
     <Compile Include="Assets\Scripts\Traps\Spikes\Spike.cs" />
     <Compile Include="Assets\Scripts\Enemies\Plant\EnemyShooting.cs" />
-    <Compile Include="Assets\Scripts\Particle\Particle.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFolow.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMakeDame.cs" />
     <Compile Include="Assets\Scripts\CheckPoints\CheckPoint.cs" />

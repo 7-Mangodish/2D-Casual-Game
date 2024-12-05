@@ -9,7 +9,7 @@ TextureImporter:
       213: 6190818703793877225
     second: Bullet Pieces_1
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -155,7 +155,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bullet Pieces_0
+      name: Bullet Pieces (16x16)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34ff71c2acf9e0940aa664537c191079
-      internalID: -8356268723538296027
+      spriteID: 570dcb8c65df0fe4d93014dc71deeb91
+      internalID: 1198940857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet Pieces_1
+      name: Bullet Pieces (16x16)_1
       rect:
         serializedVersion: 2
         x: 16
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d61af1b172c37046a877ee9438cb1fa
-      internalID: 6190818703793877225
+      spriteID: 7754fb498a2b9ca439f55a50b23baccd
+      internalID: 1541679599
       vertices: []
       indices: 
       edges: []
@@ -207,8 +207,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bullet Pieces_0: -8356268723538296027
-      Bullet Pieces_1: 6190818703793877225
+      Bullet Pieces (16x16)_0: 1198940857
+      Bullet Pieces (16x16)_1: 1541679599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

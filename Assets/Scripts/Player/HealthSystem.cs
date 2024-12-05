@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
+    [Header("Display Hearts")]
     [SerializeField] private Sprite fullHearts;
     [SerializeField] private Sprite emptyHearts;
     [SerializeField] private Image[] hearts;
@@ -17,10 +18,11 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private float durationIframe;
     private SpriteRenderer sprite;
 
-    public bool isTakeDame = false;
-
     [Header("Camera")]
     private ScreenShake screenShake;
+
+    public bool isTakeDame = false;
+
     public int CurHeart
     {
         get { return this.curHearts; }
@@ -37,11 +39,15 @@ public class HealthSystem : MonoBehaviour
         curHearts = 2;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        DisplayHeart();
+    }
 
-        if(curHearts > maxHearts)
+
+    private void DisplayHeart()
+    {
+        if (curHearts > maxHearts)
             curHearts = maxHearts;
         for (int i = 0; i < maxHearts; i++)
         {
@@ -51,23 +57,19 @@ public class HealthSystem : MonoBehaviour
                 hearts[i].sprite = emptyHearts;
         }
     }
-
-    internal void TakeDame()
-    {
-       
-        this.curHearts--;
-
-        FindObjectOfType<AudioManager>().PlaySfx("TakeDame");
-        if (curHearts <= 0)
+    public void TakeDame()
+    {      
+        if(this.curHearts <= 0)
         {
             anim.Play("Die");
             return;
         }
-        else
-            anim.SetTrigger("TakeDame");
+
+        this.curHearts--;
+
+        FindObjectOfType<AudioManager>().PlaySfx("TakeDame");
+        anim.SetTrigger("TakeDame");
         StartCoroutine("Iframe");
-        //if (screenShake != null)
-        //    Debug.Log("!null");
         StartCoroutine(screenShake.Shake(0.15f, 0.5f));
     }
 
@@ -91,6 +93,6 @@ public class HealthSystem : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         UIManager.isDied = true;
-        //Debug.Log("Die");
+        Debug.Log("Die");
     }
 }

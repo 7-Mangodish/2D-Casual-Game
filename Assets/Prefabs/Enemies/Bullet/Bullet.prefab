@@ -105,7 +105,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 72
-  particle: {fileID: 5103176600944260449, guid: 4a952ef3e83824b4dbc7495f09fd6ee8, type: 3}
+  particle: {fileID: 6029318752412295607, guid: 4a952ef3e83824b4dbc7495f09fd6ee8, type: 3}
 --- !u!50 &3037888257234281959
 Rigidbody2D:
   serializedVersion: 4
