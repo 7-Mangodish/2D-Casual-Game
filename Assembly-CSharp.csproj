@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyPatrol.cs" />
     <Compile Include="Assets\Scripts\Items\Items\Collect_Item.cs" />
     <Compile Include="Assets\Scripts\Camera\ScreenShake.cs" />
+    <Compile Include="Assets\Scripts\SceneManager\SelectLevel.cs" />
     <Compile Include="Assets\Scripts\UI\FinishMenu.cs" />
     <Compile Include="Assets\Scripts\Player\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\Traps\Fire\Fire.cs" />

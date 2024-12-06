@@ -22,6 +22,9 @@ public class CheckPoint : MonoBehaviour
         if (collision != null && collision.gameObject.CompareTag("Player")) 
         {
             anim.SetTrigger("Touching");
+
+            int levelAt = PlayerPrefs.GetInt("LevelAt");
+            PlayerPrefs.SetInt("LevelAt", levelAt + 1);
         }
     }
     void afterTouching()

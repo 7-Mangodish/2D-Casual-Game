@@ -32,8 +32,6 @@ public class LoadScene : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void LoadLevel(int number)
-    {
-        SceneManager.LoadScene("Level" + number.ToString());
-    }
+
+
 }
