@@ -8,10 +8,14 @@ public class CameraFolow : MonoBehaviour
     private float smoothTime = 0.25f;
     private Vector3 speed = Vector3.zero;
 
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform target = null;
+    private void Awake()
+    {
+    }
     void Start()
     {
-        
+        GameObject gameObject = GameObject.FindGameObjectWithTag("Player");
+        target = gameObject.transform;
     }
 
     // Update is called once per frame

@@ -64,16 +64,17 @@
     <Compile Include="Assets\Scripts\Items\Box\BreakBox.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Traps\Saw\Saw.cs" />
+    <Compile Include="Assets\Scripts\SceneManager\Setting\Character.cs" />
     <Compile Include="Assets\Scripts\UI\TextMesh.cs" />
     <Compile Include="Assets\Scripts\Enemies\FatBird\FatBirdBehaviour.cs" />
     <Compile Include="Assets\Scripts\Traps\FallingPlatform\FallingPlatform.cs" />
     <Compile Include="Assets\Scripts\Traps\Spikes\Spike.cs" />
+    <Compile Include="Assets\Scripts\SceneManager\Setting\SelectCharacter.cs" />
     <Compile Include="Assets\Scripts\Enemies\Plant\EnemyShooting.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFolow.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMakeDame.cs" />
     <Compile Include="Assets\Scripts\CheckPoints\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Traps\SpikeHead\SpikeHeadBehaviour.cs" />
-    <Compile Include="Assets\Scripts\Player\Scores.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
     <Compile Include="Assets\Scripts\Traps\Platform\Platforms.cs" />
     <Compile Include="Assets\Scripts\SceneManager\LoadScene.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Scripts\Items\Box\Box.cs" />
     <Compile Include="Assets\Scripts\Enemies\Rino\RinoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Traps\SpikeBall\SpikeBall.cs" />
+    <Compile Include="Assets\Scripts\Items\Items\Scores.cs" />
     <Compile Include="Assets\Scripts\Player\MoveMent.cs" />
     <Compile Include="Assets\Scripts\Enemies\Chicken\ChickenPatrol.cs" />
     <Compile Include="Assets\Scripts\Enemies\Turtle\TurtleBehaviour.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyPatrol.cs" />
     <Compile Include="Assets\Scripts\Items\Items\Collect_Item.cs" />
     <Compile Include="Assets\Scripts\Camera\ScreenShake.cs" />
+    <Compile Include="Assets\Scripts\SceneManager\Setting\CharacterObject.cs" />
     <Compile Include="Assets\Scripts\SceneManager\SelectLevel.cs" />
     <Compile Include="Assets\Scripts\UI\FinishMenu.cs" />
     <Compile Include="Assets\Scripts\Player\HealthSystem.cs" />

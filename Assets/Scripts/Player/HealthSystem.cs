@@ -8,7 +8,7 @@ public class HealthSystem : MonoBehaviour
     [Header("Display Hearts")]
     [SerializeField] private Sprite fullHearts;
     [SerializeField] private Sprite emptyHearts;
-    [SerializeField] private Image[] hearts;
+    [SerializeField] private Image[] hearts = new Image[4];
     [SerializeField] private int curHearts;
     [SerializeField] private int maxHearts;
     private Animator anim;

@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class StartPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private CharacterObject characterObject;
     private Animator anim;
+
+    private void Awake()
+    {
+        if(characterObject != null)
+        {
+            Instantiate(characterObject.getCharacter(PlayerPrefs.GetInt("characterIndex")));
+        }
+        Debug.Log(PlayerPrefs.GetInt("characterIndex"));
+    }
     void Start()
     {
         anim = GetComponent<Animator>();
+        Debug.Log("Start");
     }
 
     // Update is called once per frame
