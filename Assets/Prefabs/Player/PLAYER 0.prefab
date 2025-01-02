@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6500443943058969348}
   - component: {fileID: 6979304979859872335}
   - component: {fileID: 2961444609696787166}
+  - component: {fileID: 2136683115023193358}
   - component: {fileID: 8742265089822629986}
   - component: {fileID: 6358290415829576985}
   - component: {fileID: 8869698996339369340}
@@ -175,6 +176,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2136683115023193358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257821983248844911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6232031c67da37949a20f0e1589ca7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8742265089822629986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +212,6 @@ MonoBehaviour:
   wallCheckDistance: 0.75
   wallSlideSpeed: 2
   wallJumpPower: {x: 10, y: 22}
-  anim: {fileID: 0}
 --- !u!114 &6358290415829576985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ede4ddfd285ca49a93e3710dd85ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textScore: {fileID: 0}
 --- !u!114 &8869698996339369340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,14 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1a23a3400a7c844a51acb0a8344a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHearts: {fileID: 21300000, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
-  emptyHearts: {fileID: 21300002, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
-  hearts:
-  - {fileID: 2905776371675037924, guid: 13f0fa77a6f31464daf018c17ce065ec, type: 3}
-  - {fileID: 2905776371675037924, guid: 13f0fa77a6f31464daf018c17ce065ec, type: 3}
-  - {fileID: 2905776371675037924, guid: 13f0fa77a6f31464daf018c17ce065ec, type: 3}
-  curHearts: 0
-  maxHearts: 3
   numOfFlash: 5
   durationIframe: 2
   isTakeDame: 0

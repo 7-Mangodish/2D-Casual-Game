@@ -5,13 +5,6 @@ using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
-    [Header("Display Hearts")]
-    [SerializeField] private Sprite fullHearts;
-    [SerializeField] private Sprite emptyHearts;
-    [SerializeField] private Image[] hearts = new Image[4];
-    [SerializeField] private int curHearts;
-    [SerializeField] private int maxHearts;
-    private Animator anim;
 
     [Header("Iframe")]
     [SerializeField] private int numOfFlash;
@@ -21,56 +14,50 @@ public class HealthSystem : MonoBehaviour
     [Header("Camera")]
     private ScreenShake screenShake;
 
+    [Header("Animation")]
     public bool isTakeDame = false;
+    private Animator anim;
+    private AnimationControl animControl;
 
-    public int CurHeart
+
+    public void Awake()
     {
-        get { return this.curHearts; }
-        set { this.curHearts = value;}
+         PlayerPrefs.SetInt("curHeart", 2);
     }
-
 
     void Start()
     {
         Physics2D.IgnoreLayerCollision(8, 3, false);
         anim = GetComponent<Animator>();
+        animControl = GetComponent<AnimationControl>();
         sprite = GetComponent<SpriteRenderer>();
         screenShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScreenShake>();
-        curHearts = 2;
+        
     }
 
     void Update()
     {
-        DisplayHeart();
     }
 
 
-    private void DisplayHeart()
-    {
-        if (curHearts > maxHearts)
-            curHearts = maxHearts;
-        for (int i = 0; i < maxHearts; i++)
-        {
-            if (i < curHearts)
-                hearts[i].sprite = fullHearts;
-            else
-                hearts[i].sprite = emptyHearts;
-        }
-    }
     public void TakeDame()
-    {      
-        if(this.curHearts <= 0)
-        {
-            anim.Play("Die");
-            return;
-        }
+    {
+        // Calculate quantity of hearts again
+        int cntHeart = PlayerPrefs.GetInt("curHeart");
+        Debug.Log(cntHeart);
+        PlayerPrefs.SetInt("curHeart", cntHeart - 1);
 
-        this.curHearts--;
-
+        //Play animation
         FindObjectOfType<AudioManager>().PlaySfx("TakeDame");
-        anim.SetTrigger("TakeDame");
+        animControl.ChangeState("TakeDame");
+        Debug.Log("Damaged");
         StartCoroutine("Iframe");
         StartCoroutine(screenShake.Shake(0.15f, 0.5f));
+        if (cntHeart <= 0)
+        {
+            animControl.ChangeState("Die");
+            Debug.Log("Die");
+        }
     }
 
     private IEnumerator Iframe()
@@ -79,10 +66,10 @@ public class HealthSystem : MonoBehaviour
         isTakeDame = true;
         for(int i=0; i<numOfFlash; i++)
         {
-            sprite.color = new Color(1, 1, 1, 0.4f);
-            yield return new WaitForSeconds(0.2f);
+            sprite.color = new Color(1, 1, 1, 0.2f);
+            yield return new WaitForSeconds(0.15f);
             sprite.color = new Color(1, 1, 1, 1);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.15f);
         }
         isTakeDame=false;
         Physics2D.IgnoreLayerCollision(8, 3, false);
@@ -93,6 +80,6 @@ public class HealthSystem : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         UIManager.isDied = true;
-        Debug.Log("Die");
+        FindObjectOfType<AudioManager>().PlaySfx("GameOver");
     }
 }

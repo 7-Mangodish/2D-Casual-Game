@@ -38,15 +38,13 @@ public class MoveMent : MonoBehaviour
     private float wallJumpDirection;
 
     [Header("Animation")]
-    [SerializeField] private Animator anim;
     private string currentState ;
+    private AnimationControl animControl;
 
-    private HealthSystem healthSystem;
     void Start()
     {
-        healthSystem = GetComponent<HealthSystem>();
-        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        animControl = GetComponent<AnimationControl>();
         rb.gravityScale = 5f;
         speed = 10f;
         jumpPower = 18f;
@@ -129,58 +127,54 @@ public class MoveMent : MonoBehaviour
             isWallJump = true;
             rb.velocity = new Vector2(wallJumpPower.x * wallJumpDirection, wallJumpPower.y);
             wallJumpCounter = 0f;
-            FindObjectOfType<AudioManager>().PlaySfx("Jump");
 
+            FindObjectOfType<AudioManager>().PlaySfx("Jump");
             Invoke(nameof(StopWallJump), 0.5f);
         }
     }
 
     private void SetAnimator() 
     {
+        if (animControl.IsPlayingAnimation("Die") || animControl.IsPlayingAnimation("TakeDame"))
+            return;
+
         if (rb.velocity.y < 0f && !isSlide && !isGround)
         {
-            ChangeState("Fall");
+            animControl.ChangeState("Fall");
             return;
         }
         if (isWallJump)
         {
-            ChangeState("Jump");
+            animControl.ChangeState("Jump");
             return ;
         }
 
         if (isGround)
         {
             if (Mathf.Abs(rb.velocity.x) > 0.1f)
-                ChangeState("Run");
+                animControl.ChangeState("Run");
             else
-                ChangeState("Idle");
+                animControl.ChangeState("Idle");
         }
         else
         {
             if (!isSlide)
             {
                 if (cntJump == 1)
-                    ChangeState("Jump");
+                    animControl.ChangeState("Jump");
                 else if (cntJump == 0)
-                    ChangeState("DoubleJump");
+                    animControl.ChangeState("DoubleJump");
             }
             else
             {
                 if (isWallJump)
-                    ChangeState("Jump");
+                    animControl.ChangeState("Jump");
                 else
-                    ChangeState("Slide");
+                    animControl.ChangeState("Slide");
             }
         }
     }
 
-    public void ChangeState(string newState)
-    {
-        if (currentState == newState)
-            return;
-        anim.Play(newState);
-        currentState = newState;
-    }
 
     bool Walled()
     {

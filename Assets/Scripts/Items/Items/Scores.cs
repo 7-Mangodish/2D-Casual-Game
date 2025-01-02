@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Scores : MonoBehaviour
 {
-    private TextMeshProUGUI textScore;
+    [SerializeField]private TextMeshProUGUI textScore;
 
     private void Awake()
     {
@@ -19,6 +19,7 @@ public class Scores : MonoBehaviour
     }
     void Start()
     {
+        // Return the first active Object 
         textScore = FindObjectOfType<TextMeshProUGUI>();
     }
 

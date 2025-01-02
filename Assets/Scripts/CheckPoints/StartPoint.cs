@@ -11,7 +11,9 @@ public class StartPoint : MonoBehaviour
     {
         if(characterObject != null)
         {
-            Instantiate(characterObject.getCharacter(PlayerPrefs.GetInt("characterIndex")));
+            Vector2 posPlayerSpawn = new Vector2(this.transform.position.x, this.transform.position.y + 10);
+            Instantiate(characterObject.getCharacter(PlayerPrefs.GetInt("characterIndex")), 
+                this.transform.position,Quaternion.identity);
         }
         Debug.Log(PlayerPrefs.GetInt("characterIndex"));
     }

@@ -31,6 +31,7 @@ public class CheckPoint : MonoBehaviour
     {
         anim.SetTrigger("AfterTouching");
         UIManager.isFinish = true;
+        FindObjectOfType<AudioManager>().PlaySfx("FinishLevel");
     }
 
 }

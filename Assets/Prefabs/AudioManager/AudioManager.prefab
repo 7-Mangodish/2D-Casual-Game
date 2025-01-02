@@ -101,6 +101,38 @@ MonoBehaviour:
     playOnAwake: 0
     mute: 0
     audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: ca36c5281c29e9f4cbaeaf620a57c0a7, type: 3}
+    name: FinishLevel
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 037cc0e472eae504f9da5959309465b4, type: 3}
+    name: GameOver
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: f79391c0c7bda6242800130093c47987, type: 3}
+    name: ClickBtn 1
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 9483c341ba91d9e4690073abe730050d, type: 3}
+    name: HoverBtn
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
   bgSounds:
   - audioClip: {fileID: 8300000, guid: 6a374a988889aa44a84b222db70d9c2f, type: 3}
     name: MenuBackground
@@ -112,7 +144,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - audioClip: {fileID: 8300000, guid: c75d9d1fb01869145ac2fc61721187b7, type: 3}
     name: Level1Background
-    volumn: 0.2
+    volumn: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -120,7 +152,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - audioClip: {fileID: 8300000, guid: efc2a1a4714bc6645b03cc21c22e077c, type: 3}
     name: Level2Background
-    volumn: 0.2
+    volumn: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -128,7 +160,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - audioClip: {fileID: 8300000, guid: 060d4e55f542f334d8a9ce208ca8c97d, type: 3}
     name: Level3Background
-    volumn: 0.2
+    volumn: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -136,7 +168,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - audioClip: {fileID: 8300000, guid: 091a369c3c2b63245bfddcb8aefae8be, type: 3}
     name: Level0Background
-    volumn: 0.2
+    volumn: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0

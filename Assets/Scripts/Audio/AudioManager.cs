@@ -7,22 +7,28 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sfxSounds;
     public Sound[] bgSounds;
-    public static AudioManager instance;
+
+    private static AudioManager instance;
+    public static AudioManager Instance { get => instance; }
+
     public string curScene;
     public string curBackgroundSound;
     private void Awake()
     {
+
         if(instance == null)
         {
             instance = this;
         }
         else
         {
+            Debug.Log("Second AudioManager is initiated");
             Destroy(gameObject);
             return;
         }
         //Debug.Log(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
+
         foreach(Sound sound in sfxSounds)
         {
             sound.audioSource = this.gameObject.AddComponent<AudioSource>();
@@ -30,7 +36,7 @@ public class AudioManager : MonoBehaviour
             sound.audioSource.clip = sound.audioClip;
             sound.audioSource.name = sound.name;
             sound.audioSource.pitch = sound.pitch;
-            sound.audioSource.volume = sound.volumn;
+            sound.audioSource.volume = sound.volumn = 0.4f;
             sound.audioSource.loop = sound.loop;
             sound.audioSource.playOnAwake = sound.playOnAwake;
             sound.audioSource.mute = sound.mute;
@@ -43,64 +49,26 @@ public class AudioManager : MonoBehaviour
             sound.audioSource.clip = sound.audioClip;
             sound.audioSource.name = sound.name;
             sound.audioSource.pitch = sound.pitch;
-            sound.audioSource.volume = sound.volumn;
+            sound.audioSource.volume = sound.volumn =0.4f;
             sound.audioSource.loop = sound.loop;
             sound.audioSource.playOnAwake = sound.playOnAwake;
             sound.audioSource.mute = sound.mute;
 
         }
+
+
     }
 
     public void Start()
     {
-        //curScene = SceneManager.GetActiveScene().buildIndex;
-        //this.PlayBackgroundSound("MenuBackground");
         curScene = "MainMenu";
         curBackgroundSound = "MenuBackground";
         this.PlayBackgroundSound("MenuBackground");
     }
 
     public void Update()
-    {
-        if (SceneManager.GetActiveScene().buildIndex==1 || SceneManager.GetActiveScene().buildIndex == 6)
-            return;
-        if (curScene != SceneManager.GetActiveScene().name)
-        {
-            curScene = SceneManager.GetActiveScene().name;
-            //Debug.Log(curScene);
-            //Debug.Log(SceneManager.GetActiveScene().buildIndex);
-            this.MuteSound(curBackgroundSound);
-            if (curScene == "MainMenu")
-            {
-                this.PlayBackgroundSound("MenuBackground");
-                curBackgroundSound = "MenuBackground";
-
-            }
-            else if (curScene == "Level0")
-            {
-                this.PlayBackgroundSound("Level0Background");
-                curBackgroundSound = "Level0Background";
-            }
-            else if (curScene == "Level1")
-            {
-
-                this.PlayBackgroundSound("Level1Background");
-                curBackgroundSound = "Level1Background";
-
-            }
-            else if (curScene == "Level2")
-            {
-                this.PlayBackgroundSound("Level2Background");
-                curBackgroundSound = "Level2Background";
-
-            }
-            else if (curScene == "Level3")
-            {
-                this.PlayBackgroundSound("Level3Background");
-                curBackgroundSound = "Level3Background";
-
-            }
-        }
+    {        
+        
     }
 
     public void PlaySfx(string name)
@@ -169,5 +137,24 @@ public class AudioManager : MonoBehaviour
         {
             res.audioSource.mute = true;
         }
+    }
+
+    public void UpdateVolumn(string str, float volumn)
+    {
+        if(str == "music")
+        {
+            foreach (Sound sound in bgSounds)
+            {
+                sound.audioSource.volume = volumn;
+            }
+        }
+        else if(str == "sfx")
+        {
+            foreach (Sound sound in sfxSounds)
+            {
+                sound.audioSource.volume = volumn;
+            }
+        }
+
     }
 }
