@@ -21,10 +21,9 @@ public class Collect_Item : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);           
-            FindObjectOfType<AudioManager>().PlaySfx("CollectItem");
-
-            int curScore = PlayerPrefs.GetInt("score");
-            PlayerPrefs.SetInt("score", curScore + 100);
+            AudioManager.Instance.PlaySfx("CollectItem");
+            GameManager.Instance.UpdateCurrentScore();
+            //Debug.Log(GameManager.Instance.GetCurrentScore());
             //Instantiate(pfDisapear, this.transform.position, Quaternion.identity);
         }
 

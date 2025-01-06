@@ -54,11 +54,15 @@ public class UIManager : MonoBehaviour
         if (isDied)
         {
             LoadDieMenu();
+
         }
         else
         {
             if (isFinish)
+            {
                 LoadFinishMenu();
+                GameManager.Instance.SaveScoreAndStar();
+            }
             else
             {
                 if (Input.GetKeyDown(KeyCode.Escape))
@@ -69,6 +73,7 @@ public class UIManager : MonoBehaviour
                     }
                     else
                         Pause();
+                    AudioManager.Instance.PlaySfx("PopUp");
                 }
             }
 

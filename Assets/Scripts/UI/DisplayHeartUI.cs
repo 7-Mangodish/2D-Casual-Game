@@ -9,15 +9,9 @@ public class DisplayHeartUI : MonoBehaviour
     [SerializeField] private Sprite fullHeart ;
     [SerializeField] private Sprite blankHeart;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        int cntHeart = PlayerPrefs.GetInt("curHeart");
+        int cntHeart = GameManager.Instance.GetHeart();
         for(int i = 0; i<3; i++)
         {
             if(i < cntHeart)

@@ -20,11 +20,6 @@ public class HealthSystem : MonoBehaviour
     private AnimationControl animControl;
 
 
-    public void Awake()
-    {
-         PlayerPrefs.SetInt("curHeart", 2);
-    }
-
     void Start()
     {
         Physics2D.IgnoreLayerCollision(8, 3, false);
@@ -43,14 +38,15 @@ public class HealthSystem : MonoBehaviour
     public void TakeDame()
     {
         // Calculate quantity of hearts again
-        int cntHeart = PlayerPrefs.GetInt("curHeart");
-        Debug.Log(cntHeart);
-        PlayerPrefs.SetInt("curHeart", cntHeart - 1);
+        int cntHeart = GameManager.Instance.GetHeart();
+        GameManager.Instance.SetHeart(cntHeart -1);
 
         //Play animation
-        FindObjectOfType<AudioManager>().PlaySfx("TakeDame");
+        AudioManager.Instance.PlaySfx("TakeDame");
         animControl.ChangeState("TakeDame");
         Debug.Log("Damaged");
+        Debug.Log(cntHeart);
+        Debug.Log(GameManager.Instance.GetHeart());
         StartCoroutine("Iframe");
         StartCoroutine(screenShake.Shake(0.15f, 0.5f));
         if (cntHeart <= 0)
@@ -80,6 +76,6 @@ public class HealthSystem : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         UIManager.isDied = true;
-        FindObjectOfType<AudioManager>().PlaySfx("GameOver");
+        AudioManager.Instance.PlaySfx("GameOver");
     }
 }

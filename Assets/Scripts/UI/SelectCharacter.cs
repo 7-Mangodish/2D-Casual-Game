@@ -25,7 +25,6 @@ public class SelectCharacter : MonoBehaviour
             characterIndex = 0;
         }
         setCharacterImage();
-        FindObjectOfType<AudioManager>().PlaySfx("ClickBtn 1");
     }
 
     public void backOptionCharacter()
@@ -36,7 +35,6 @@ public class SelectCharacter : MonoBehaviour
             characterIndex = characterObject.getCharacterCount()-1;
         }
         setCharacterImage();
-        FindObjectOfType<AudioManager>().PlaySfx("ClickBtn 1");
 
     }
 

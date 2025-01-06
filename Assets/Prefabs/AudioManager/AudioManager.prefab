@@ -133,6 +133,14 @@ MonoBehaviour:
     playOnAwake: 0
     mute: 0
     audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 3e708b6d6907a4340a50dfb3c7c08169, type: 3}
+    name: PopUp
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
   bgSounds:
   - audioClip: {fileID: 8300000, guid: 6a374a988889aa44a84b222db70d9c2f, type: 3}
     name: MenuBackground

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2961444609696787166}
   - component: {fileID: 2136683115023193358}
   - component: {fileID: 8742265089822629986}
-  - component: {fileID: 6358290415829576985}
   - component: {fileID: 8869698996339369340}
   m_Layer: 3
   m_Name: PLAYER 0
@@ -212,19 +211,6 @@ MonoBehaviour:
   wallCheckDistance: 0.75
   wallSlideSpeed: 2
   wallJumpPower: {x: 10, y: 22}
---- !u!114 &6358290415829576985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257821983248844911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ede4ddfd285ca49a93e3710dd85ec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textScore: {fileID: 0}
 --- !u!114 &8869698996339369340
 MonoBehaviour:
   m_ObjectHideFlags: 0

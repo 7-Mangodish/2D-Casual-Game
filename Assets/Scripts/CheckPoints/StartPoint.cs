@@ -15,18 +15,13 @@ public class StartPoint : MonoBehaviour
             Instantiate(characterObject.getCharacter(PlayerPrefs.GetInt("characterIndex")), 
                 this.transform.position,Quaternion.identity);
         }
-        Debug.Log(PlayerPrefs.GetInt("characterIndex"));
+        Debug.Log("Character" + PlayerPrefs.GetInt("characterIndex"));
     }
+
     void Start()
     {
         anim = GetComponent<Animator>();
-        Debug.Log("Start");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Debug.Log("Start");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

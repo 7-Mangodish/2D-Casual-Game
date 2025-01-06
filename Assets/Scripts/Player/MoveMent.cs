@@ -84,13 +84,13 @@ public class MoveMent : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpPower);
                 cntJump -= 1;
-                FindObjectOfType<AudioManager>().PlaySfx("Jump");
+                AudioManager.Instance.PlaySfx("Jump");
             }
             else if (cntJump == 1)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0.75f * jumpPower);
                 cntJump -= 1;
-                FindObjectOfType<AudioManager>().PlaySfx("Jump");
+                AudioManager.Instance.PlaySfx("Jump");
 
             }
 
@@ -128,7 +128,7 @@ public class MoveMent : MonoBehaviour
             rb.velocity = new Vector2(wallJumpPower.x * wallJumpDirection, wallJumpPower.y);
             wallJumpCounter = 0f;
 
-            FindObjectOfType<AudioManager>().PlaySfx("Jump");
+            AudioManager.Instance.PlaySfx("Jump");
             Invoke(nameof(StopWallJump), 0.5f);
         }
     }

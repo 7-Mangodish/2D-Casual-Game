@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class SoundUI : MonoBehaviour
 {
-    private AudioManager audio;
-    private void Awake()
-    {
-        audio = FindObjectOfType<AudioManager>();
-    }
 
     public void HoverBtn()
     {
-        audio.PlaySfx("HoverBtn");
+        AudioManager.Instance.PlaySfx("HoverBtn");
     }
     public void ClickBtn()
     {
-        audio.PlaySfx("ClickBtn 1");
+        AudioManager.Instance.PlaySfx("ClickBtn 1");
     }
 }

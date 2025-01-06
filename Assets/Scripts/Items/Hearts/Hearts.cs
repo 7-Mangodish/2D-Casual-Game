@@ -35,9 +35,8 @@ public class Hearts : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            HealthSystem health = collision.gameObject.GetComponent<HealthSystem>();
-            PlayerPrefs.SetInt("curHeart", PlayerPrefs.GetInt("curHeart") + 1);
-            FindObjectOfType<AudioManager>().PlaySfx("CollectItem");
+            GameManager.Instance.SetHeart(GameManager.Instance.GetHeart() + 1);           
+            AudioManager.Instance.PlaySfx("CollectItem");
             this.gameObject.SetActive(false);
         }
     }

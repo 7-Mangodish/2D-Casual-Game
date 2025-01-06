@@ -5,25 +5,29 @@ using UnityEngine.UI;
 
 public class AudioAdjusment : MonoBehaviour
 {
-    [SerializeField] private Slider musicSlider;
-    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider slider;
+    [SerializeField] private string nameSlider;
 
     private void Awake()
     {
-        musicSlider.value = 0.3f;
-        sfxSlider.value = 0.3f;
-
+        slider = GetComponent<Slider>();
     }
     void Start()
     {
-        
-        musicSlider.onValueChanged.AddListener((value) =>
+        if(slider == null || nameSlider == "")
         {
-            AudioManager.Instance.UpdateVolumn("music",value);
-        });
-        sfxSlider.onValueChanged.AddListener((value) =>
+            Debug.Log("Thieu slider hoac ten");
+            return;
+        }
+
+        if (!PlayerPrefs.HasKey(nameSlider))
+            PlayerPrefs.SetFloat(nameSlider, 0.3f);
+        slider.value = PlayerPrefs.GetFloat(nameSlider); 
+
+        slider.onValueChanged.AddListener((value) =>
         {
-            AudioManager.Instance.UpdateVolumn("sfx",value);
+            AudioManager.Instance.UpdateVolumn(nameSlider, value);
+            PlayerPrefs.SetFloat(nameSlider, value);
         });
 
     }
