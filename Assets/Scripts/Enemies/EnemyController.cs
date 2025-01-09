@@ -25,23 +25,25 @@ public class EnemyController : MonoBehaviour
 
     public void EnemyDied()
     {
-        if(rb.bodyType == RigidbodyType2D.Static)
-        {
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.mass = 1000;
-            rb.gravityScale = 4;
-        }
+        //if(rb.bodyType == RigidbodyType2D.Static)
+        //{
+        //    rb.bodyType = RigidbodyType2D.Dynamic;
+        //    rb.mass = 1000;
+        //    rb.gravityScale = 4;
+        //}
 
-        anim.Play("Die");
+        //anim.Play("Die");
 
-        rb.velocity = new Vector2(4, 10);
-        this.transform.RotateAround(this.transform.position, Vector3.back, angleDie*Time.deltaTime);
-        foreach(BoxCollider2D c in bc)
-        {
-            c.enabled = false;
-        }
-        Invoke("StopAnimation", 0.1f);
-        Invoke("EnemyDisAppear", timeDied);
+        //rb.velocity = new Vector2(4, 10);
+        //this.transform.RotateAround(this.transform.position, Vector3.back, angleDie*Time.deltaTime);
+        //foreach(BoxCollider2D c in bc)
+        //{
+        //    c.enabled = false;
+        //}
+        //Invoke("StopAnimation", 0.1f);
+        //Invoke("EnemyDisAppear", timeDied);
+
+
     }
 
     private void StopAnimation()

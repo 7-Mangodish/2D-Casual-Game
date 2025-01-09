@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3037888257234281959}
   - component: {fileID: 2405602888131095685}
   m_Layer: 8
-  m_Name: Bullet
+  m_Name: BulletPlant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   force: 10
   layer:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 4062
   particle: {fileID: 6029318752412295607, guid: 4a952ef3e83824b4dbc7495f09fd6ee8, type: 3}
 --- !u!50 &3037888257234281959
 Rigidbody2D:

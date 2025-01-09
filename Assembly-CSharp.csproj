@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\UI\TextMesh.cs" />
     <Compile Include="Assets\Scripts\Enemies\FatBird\FatBirdBehaviour.cs" />
     <Compile Include="Assets\Scripts\Traps\FallingPlatform\FallingPlatform.cs" />
+    <Compile Include="Assets\Scripts\Background\ScrollingBackground.cs" />
     <Compile Include="Assets\Scripts\Traps\Spikes\Spike.cs" />
     <Compile Include="Assets\ScriptableObject\PlayerInfor\PlayerInfor.cs" />
     <Compile Include="Assets\Scripts\Enemies\Plant\EnemyShooting.cs" />
@@ -76,10 +77,12 @@
     <Compile Include="Assets\Scripts\Camera\CameraFolow.cs" />
     <Compile Include="Assets\Scripts\Player\AnimationControl.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMakeDame.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Ghost\GhostBehaviour.cs" />
     <Compile Include="Assets\Scripts\UI\Scores.cs" />
     <Compile Include="Assets\Scripts\CheckPoints\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\UI\AudioAdjusment.cs" />
     <Compile Include="Assets\Scripts\Traps\SpikeHead\SpikeHeadBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyDie.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
     <Compile Include="Assets\Scripts\Traps\Platform\Platforms.cs" />
     <Compile Include="Assets\Scripts\SceneManager\LoadScene.cs" />

@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841293205931681159}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7753595596830847117}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2666822868690839289
 BoxCollider2D:
@@ -100,6 +100,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5212825158554219163}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -108,7 +109,6 @@ Transform:
   - {fileID: 8393993006279503567}
   - {fileID: 5995298550907801209}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5239663679839972386
 GameObject:
@@ -124,9 +124,9 @@ GameObject:
   - component: {fileID: 4785126223097990487}
   - component: {fileID: 6006741355072836950}
   - component: {fileID: 3878282834444845270}
-  - component: {fileID: 8098852676639548853}
   - component: {fileID: 4328095518808948060}
   - component: {fileID: 1342126777204655443}
+  - component: {fileID: 2279660526430899534}
   m_Layer: 8
   m_Name: FatBird
   m_TagString: Enemy
@@ -141,13 +141,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5239663679839972386}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.76, z: 0.011696834}
+  m_LocalPosition: {x: 0, y: 4.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7753595596830847117}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1628929011388012396
 SpriteRenderer:
@@ -339,19 +339,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8098852676639548853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5239663679839972386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 026267902b4e478498146b9c0e25eb76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  angleDie: 0
 --- !u!114 &4328095518808948060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,3 +367,16 @@ MonoBehaviour:
   checkPlayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &2279660526430899534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239663679839972386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413b1c292ce2f3247ab2ae1f45c13351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 2141822698640710417, guid: d4002730d910fb64aa4fab4a9962ee8e, type: 3}

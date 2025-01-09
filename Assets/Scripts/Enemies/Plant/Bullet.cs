@@ -9,12 +9,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float force;
     [SerializeField] private LayerMask layer;
     [SerializeField] private GameObject particle;
-    void Start()
-    {
-        //player = GameObject.FindGameObjectWithTag("Player");
-    }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(direct * force * Time.deltaTime);
@@ -31,10 +25,7 @@ public class Bullet : MonoBehaviour
 
             }
 
-            if (hitInfor.collider.gameObject.CompareTag("Ground"))
-            {
-                Instantiate(particle, this.transform.position, Quaternion.identity);
-            }
+            Instantiate(particle, this.transform.position, Quaternion.identity);
             desTroyBullet();
         }
         Invoke(nameof(desTroyBullet), 3f);

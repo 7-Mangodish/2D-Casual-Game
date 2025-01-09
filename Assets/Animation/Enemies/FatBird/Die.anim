@@ -22,13 +22,13 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 3212130233290299859, guid: 6800e71ba0f7fb540975b565c43a1930, type: 3}
-    - time: 0.033333335
+    - time: 0.016666668
       value: {fileID: 9099119616611608060, guid: 6800e71ba0f7fb540975b565c43a1930, type: 3}
-    - time: 0.083333336
+    - time: 0.033333335
       value: {fileID: 5776852391583572303, guid: 6800e71ba0f7fb540975b565c43a1930, type: 3}
-    - time: 0.13333334
+    - time: 0.06666667
       value: {fileID: 4404715702971333830, guid: 6800e71ba0f7fb540975b565c43a1930, type: 3}
-    - time: 0.16666667
+    - time: 0.083333336
       value: {fileID: -6399027368534209264, guid: 6800e71ba0f7fb540975b565c43a1930, type: 3}
     attribute: m_Sprite
     path: 
@@ -62,7 +62,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.18333334
+    m_StopTime: 0.1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -81,4 +81,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.083333336
+    functionName: InitParticle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

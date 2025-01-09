@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sfxSounds;
-    public Sound[] bgSounds;
+    [SerializeField] private Sound[] sfxSounds;
+    [SerializeField] private Sound[] bgSounds;
 
     private static AudioManager instance;
     public static AudioManager Instance { get => instance; }
 
-    public string curScene;
     public string curBackgroundSound;
+    public int buildIndex;
     private void Awake()
     {
 
@@ -26,7 +26,6 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        //Debug.Log(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
 
         foreach(Sound sound in sfxSounds)
@@ -61,16 +60,49 @@ public class AudioManager : MonoBehaviour
 
     public void Start()
     {
-        curScene = "MainMenu";
+        buildIndex = SceneManager.GetActiveScene().buildIndex;
         curBackgroundSound = "MenuBackground";
         this.PlayBackgroundSound("MenuBackground");
     }
 
     public void Update()
-    {        
-        
+    {
+        if(buildIndex !=  SceneManager.GetActiveScene().buildIndex)
+        {
+            UpdateSound();
+            buildIndex = SceneManager.GetActiveScene().buildIndex;
+        }
     }
 
+    private void UpdateSound()
+    {
+
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            if (curBackgroundSound != "MenuBackground")
+            {
+                this.MuteSound(curBackgroundSound);
+
+                this.PlayBackgroundSound("MenuBackground");
+                this.UnMuteSound("MenuBackground");
+                curBackgroundSound = "MenuBackground";
+            }
+        }
+        else
+        {
+            if (SceneManager.GetActiveScene().buildIndex <= 3)
+                return;
+            else
+            {
+                this.MuteSound(curBackgroundSound);
+
+                string nameScene = SceneManager.GetActiveScene().name;
+                curBackgroundSound = nameScene + "Background";
+                this.PlayBackgroundSound(curBackgroundSound);
+                this.UnMuteSound(curBackgroundSound);
+            }
+        }
+    }
     public void PlaySfx(string name)
     {
         Sound res = null;
@@ -96,7 +128,6 @@ public class AudioManager : MonoBehaviour
     public void PlayBackgroundSound(string name)
     {
         Sound res = null;
-        //Debug.Log(name);
         foreach (Sound sound in bgSounds)
         {
             if (sound.name == name)
@@ -136,6 +167,29 @@ public class AudioManager : MonoBehaviour
         else
         {
             res.audioSource.mute = true;
+        }
+    }
+
+    public void UnMuteSound(string name)
+    {
+        Sound res = null;
+        //Debug.Log(name);
+        foreach (Sound sound in bgSounds)
+        {
+            if (sound.name == name)
+            {
+                res = sound;
+                break;
+            }
+        }
+        if (res == null)
+        {
+            Debug.Log("Sound" + name + "Not found");
+            return;
+        }
+        else
+        {
+            res.audioSource.mute = false;
         }
     }
 

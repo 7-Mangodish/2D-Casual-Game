@@ -142,7 +142,7 @@ MonoBehaviour:
     mute: 0
     audioSource: {fileID: 0}
   bgSounds:
-  - audioClip: {fileID: 8300000, guid: 6a374a988889aa44a84b222db70d9c2f, type: 3}
+  - audioClip: {fileID: 8300000, guid: 0d7d94fc2672f634fa335d3af0342ea7, type: 3}
     name: MenuBackground
     volumn: 0.2
     pitch: 1
@@ -166,7 +166,7 @@ MonoBehaviour:
     playOnAwake: 0
     mute: 0
     audioSource: {fileID: 0}
-  - audioClip: {fileID: 8300000, guid: 060d4e55f542f334d8a9ce208ca8c97d, type: 3}
+  - audioClip: {fileID: 8300000, guid: 11879cc5e2380374986afc31b40346b5, type: 3}
     name: Level3Background
     volumn: 0.3
     pitch: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
     playOnAwake: 0
     mute: 0
     audioSource: {fileID: 0}
-  - audioClip: {fileID: 8300000, guid: 091a369c3c2b63245bfddcb8aefae8be, type: 3}
+  - audioClip: {fileID: 8300000, guid: 5be4e3bde173217478b16a41d3fc3b48, type: 3}
     name: Level0Background
     volumn: 0.4
     pitch: 1
@@ -182,5 +182,5 @@ MonoBehaviour:
     playOnAwake: 0
     mute: 0
     audioSource: {fileID: 0}
-  curScene: 
   curBackgroundSound: 
+  buildIndex: 0

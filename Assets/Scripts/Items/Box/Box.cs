@@ -11,13 +11,10 @@ public class Box : MonoBehaviour
     private Animator anim;
     private float force;
 
-    private ScreenShake screenShake;
-    //private GameObject player;
     void Start()
     {
         force = 10;
         anim = GetComponent<Animator>();
-        screenShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScreenShake>();
         Physics2D.IgnoreLayerCollision(9, 8, true);
     }
 
@@ -30,10 +27,9 @@ public class Box : MonoBehaviour
             //Debug.Log(new Vector2(parent.transform.position.x,parent.transform.position.y));
             Instantiate(pfObject, new Vector2(this.transform.parent.position.x,
             this.transform.parent.position.y + 1), Quaternion.identity);
-            StartCoroutine(screenShake.Shake(0.15f, 0.5f));
+
             Destroy(parent.gameObject);
-            FindObjectOfType<AudioManager>().PlaySfx("BlockBreak");
-            StartCoroutine(screenShake.Shake(0.15f, 0.5f));
+            AudioManager.Instance.PlaySfx("BlockBreak");
             if(pfItem != null)
             {
                 Instantiate(pfItem, this.transform.parent.position, Quaternion.identity);
@@ -49,7 +45,6 @@ public class Box : MonoBehaviour
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
             rb.AddForce(Vector3.up * force, ForceMode2D.Impulse);
             anim.Play("Hit");
-            //FindObjectOfType<AudioManager>().Play("Jump");
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
