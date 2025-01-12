@@ -75,6 +75,7 @@ public class MoveMent : MonoBehaviour
         else if (directX < 0)
             transform.localScale = new Vector3(-1, 1, 1);
 
+        //rb.AddForce(new Vector2(directX * speed, directY));
         rb.velocity = new Vector2(directX * speed, rb.velocity.y);
         if (isGround && rb.velocity.y < 0.1f)
             cntJump = 2;

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxSounds:
-  - audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+  - audioClip: {fileID: 8300000, guid: df081a75713dd8243bbbf30917bf936c, type: 3}
     name: CollectItem
     volumn: 0.5
     pitch: 1
@@ -93,15 +93,15 @@ MonoBehaviour:
     playOnAwake: 0
     mute: 0
     audioSource: {fileID: 0}
-  - audioClip: {fileID: 8300000, guid: e33a8590e0a184a40affe99e0a69bd6e, type: 3}
-    name: ClickButton
+  - audioClip: {fileID: 8300000, guid: 8c85f62b901eccf42a3c1d576b23ebb0, type: 3}
+    name: ClickBtn 1
     volumn: 0.5
     pitch: 1
     loop: 0
     playOnAwake: 0
     mute: 0
     audioSource: {fileID: 0}
-  - audioClip: {fileID: 8300000, guid: ca36c5281c29e9f4cbaeaf620a57c0a7, type: 3}
+  - audioClip: {fileID: 8300000, guid: 199d73f37d88cbb4eadf5954a080e74b, type: 3}
     name: FinishLevel
     volumn: 0.5
     pitch: 1
@@ -118,7 +118,7 @@ MonoBehaviour:
     mute: 0
     audioSource: {fileID: 0}
   - audioClip: {fileID: 8300000, guid: f79391c0c7bda6242800130093c47987, type: 3}
-    name: ClickBtn 1
+    name: ClickBtn
     volumn: 0.5
     pitch: 1
     loop: 0
@@ -135,6 +135,14 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - audioClip: {fileID: 8300000, guid: 3e708b6d6907a4340a50dfb3c7c08169, type: 3}
     name: PopUp
+    volumn: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    mute: 0
+    audioSource: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: cdb12ff2a731bc8439eaa043c0d5c86b, type: 3}
+    name: CollectHeart
     volumn: 0.5
     pitch: 1
     loop: 0

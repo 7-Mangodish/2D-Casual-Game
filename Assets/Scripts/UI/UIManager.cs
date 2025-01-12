@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if (Input.GetKeyDown(KeyCode.Tab))
                 {
                     if (isPause)
                     {

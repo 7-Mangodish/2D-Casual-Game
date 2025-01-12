@@ -30,7 +30,7 @@ public class Trampoline : MonoBehaviour
             MoveMent playerMove = collision.gameObject.GetComponent<MoveMent>();
             if(player != null)
             {
-                FindObjectOfType<AudioManager>().PlaySfx("Trampoline");
+                AudioManager.Instance.PlaySfx("Trampoline");
                 player.AddForce(Vector2.up * force, ForceMode2D.Impulse);
                 anim.SetTrigger("Jump");
                 playerMove.CntJump = 1;

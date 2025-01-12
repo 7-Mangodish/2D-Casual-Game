@@ -44,9 +44,7 @@ public class HealthSystem : MonoBehaviour
         //Play animation
         AudioManager.Instance.PlaySfx("TakeDame");
         animControl.ChangeState("TakeDame");
-        //Debug.Log("Damaged");
-        //Debug.Log(cntHeart);
-        //Debug.Log(GameManager.Instance.GetHeart());
+
         StartCoroutine("Iframe");
         StartCoroutine(screenShake.Shake(0.15f, 0.5f));
         if (cntHeart <= 0)

@@ -4,28 +4,50 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject makeDameArea;
+    [SerializeField] private float timeFire;
+
+    private float timeDuration;
+    private Animator anim;
+    private bool isOff;
     void Start()
     {
-        this.gameObject.SetActive(false);
+        anim = GetComponent<Animator>();
+        isOff = true;
+        timeDuration = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if (!isOff)
         {
-            Debug.Log("Take Dame");
-            //HealthSystem health = collision.gameObject.GetComponent<HealthSystem>();
-            //if (health != null)
-            //{
-            //    health.TakeDame();
-            //}
+            timeDuration += Time.deltaTime;
+            if(timeDuration > timeFire)
+            {
+                timeDuration = 0;
+                TurnOff();
+            }
+
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isOff)
+        {
+            anim.Play("Hit");
+        }
+    }
+
+    public void TurnOn()
+    {
+        makeDameArea.SetActive(true); 
+        isOff = false;
+    }
+
+    private void TurnOff()
+    {
+        anim.Play("Off");
+        isOff = true;
+        makeDameArea.SetActive(false);
     }
 }

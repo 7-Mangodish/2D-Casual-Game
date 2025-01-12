@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Audio\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\Items\Box\BreakBox.cs" />
-    <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Traps\Saw\Saw.cs" />
     <Compile Include="Assets\Scripts\Items\Items\Star.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
@@ -78,18 +77,20 @@
     <Compile Include="Assets\Scripts\Player\AnimationControl.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMakeDame.cs" />
     <Compile Include="Assets\Scripts\Enemies\Ghost\GhostBehaviour.cs" />
+    <Compile Include="Assets\Scripts\UI\Stars.cs" />
     <Compile Include="Assets\Scripts\UI\Scores.cs" />
     <Compile Include="Assets\Scripts\CheckPoints\CheckPoint.cs" />
+    <Compile Include="Assets\Scripts\Traps\Fire\FireMakeDame.cs" />
     <Compile Include="Assets\Scripts\UI\AudioAdjusment.cs" />
     <Compile Include="Assets\Scripts\Traps\SpikeHead\SpikeHeadBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyDie.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
     <Compile Include="Assets\Scripts\Traps\Platform\Platforms.cs" />
     <Compile Include="Assets\Scripts\SceneManager\LoadScene.cs" />
-    <Compile Include="Assets\Scripts\Traps\Fire\FireBox.cs" />
     <Compile Include="Assets\Scripts\SceneManager\SelectLevelScene\SelectLevel.cs" />
     <Compile Include="Assets\Scripts\Enemies\Plant\Bullet.cs" />
     <Compile Include="Assets\Scripts\UI\SoundUI.cs" />
+    <Compile Include="Assets\Scripts\Traps\RowSpike\RowSpike.cs" />
     <Compile Include="Assets\Scripts\UI\DisplayHeartUI.cs" />
     <Compile Include="Assets\ScriptableObject\Character\CharacterObject.cs" />
     <Compile Include="Assets\Scripts\Items\Box\Box.cs" />

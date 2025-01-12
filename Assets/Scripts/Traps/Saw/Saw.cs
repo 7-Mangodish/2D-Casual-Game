@@ -6,8 +6,9 @@ public class Saw : EnemyPatrol
 {
     void Start()
     {
+
         targetPoint = 0;
-        speedPatrol = 3;
+        speedPatrol = 5;
 
     }
 

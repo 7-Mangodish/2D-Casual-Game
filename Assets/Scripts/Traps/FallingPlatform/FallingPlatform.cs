@@ -17,10 +17,6 @@ public class FallingPlatform : MonoBehaviour
         anim = GetComponent<Animator>();
         beginPos = transform.position;
         Physics2D.IgnoreLayerCollision(11, 3, true);
-
-        speed = 5;
-        distance = 10;
-        timeStay = 2;
     }
 
     // Update is called once per frame

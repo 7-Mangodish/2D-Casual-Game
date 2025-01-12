@@ -17,9 +17,9 @@ public class RinoBehaviour : MonoBehaviour
     private string curState;
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(8, 8, true);
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreLayerCollision(9, 9, true);
         direction = 1;
         timeIdle = 3f;
         curState = string.Empty;

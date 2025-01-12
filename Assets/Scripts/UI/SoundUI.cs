@@ -11,6 +11,12 @@ public class SoundUI : MonoBehaviour
     }
     public void ClickBtn()
     {
+        AudioManager.Instance.PlaySfx("ClickBtn");
+    }
+
+    public void ClickBtn1()
+    {
         AudioManager.Instance.PlaySfx("ClickBtn 1");
+
     }
 }

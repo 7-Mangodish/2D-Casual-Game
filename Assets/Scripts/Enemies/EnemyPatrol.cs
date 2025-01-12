@@ -50,18 +50,21 @@ public class EnemyPatrol : MonoBehaviour
         {
             timeDuration += Time.deltaTime;
             changeState("Idle");
+            Debug.Log("Idle");
+
             if (timeDuration > timeIdle)
             {
                 timeDuration = 0;
                 targetPoint++;
                 Flip();
+                changeState("Run");
                 if (targetPoint >= cntPoints)
                     targetPoint = 0;
             }
         }
         else
         {
-            changeState("Run");
+
             this.transform.position = Vector3.MoveTowards(this.transform.position,
             points[targetPoint].position, speedPatrol * Time.deltaTime);
         }

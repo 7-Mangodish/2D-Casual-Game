@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 5547495223674115614}
   - component: {fileID: 4332544599685744228}
   - component: {fileID: 7770190777492730070}
-  - component: {fileID: 1811420811771841751}
   - component: {fileID: 6204987407976954140}
   - component: {fileID: 6499486470740744265}
   - component: {fileID: 2597805594316353846}
   - component: {fileID: 2375868129782022974}
+  - component: {fileID: 2688752246979897916}
   m_Layer: 8
   m_Name: MushRoom
   m_TagString: Enemy
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1298083155
-  m_SortingLayer: 3
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: -6367560908665664636, guid: a6465882e447a7346b1d80709f6094be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -163,22 +163,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3387766, y: 1.3056115}
   m_EdgeRadius: 0
---- !u!114 &1811420811771841751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764240035187654821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0186203afb0c4284cba147feb643ad50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points:
-  - {fileID: 1117808689283928878}
-  - {fileID: 2392969817792998113}
-  speedPatrol: 2
 --- !u!114 &6204987407976954140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +254,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6131024, y: 0.73613477}
   m_EdgeRadius: 0
+--- !u!114 &2688752246979897916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764240035187654821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0186203afb0c4284cba147feb643ad50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 1117808689283928878}
+  - {fileID: 2392969817792998113}
+  speedPatrol: 0
 --- !u!1 &2742310002542275606
 GameObject:
   m_ObjectHideFlags: 0

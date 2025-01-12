@@ -36,7 +36,7 @@ public class Hearts : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.SetHeart(GameManager.Instance.GetHeart() + 1);           
-            AudioManager.Instance.PlaySfx("CollectItem");
+            AudioManager.Instance.PlaySfx("CollectHeart");
             this.gameObject.SetActive(false);
         }
     }
